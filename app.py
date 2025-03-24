@@ -92,7 +92,7 @@ button_run_pressed = st.button("Click here to run the simulation and generate th
 if button_run_pressed:
 
     # add a spinner and then display success box
-    with st.spinner('Simulating the minor injuries unit...'):
+    with st.spinner('Simulating the treaatment centre...'):
 
         args = Scenario(manual_arrival_rate=60/(mean_arrivals_per_day/24),
                         n_cubicles_1=nurses,
@@ -146,8 +146,8 @@ if button_run_pressed:
                 plotly_width=600,
                 override_x_max=300,
                 override_y_max=500,
-                wrap_queues_at=25,
-                step_snapshot_max=125,
+                wrap_queues_at=15,
+                step_snapshot_max=100,
                 time_display_units="dhm",
                 display_stage_labels=False,
                 add_background_image="https://raw.githubusercontent.com/hsma-programme/Teaching_DES_Concepts_Streamlit/main/resources/Simplest%20Model%20Background%20Image%20-%20Horizontal%20Layout.drawio.png",
