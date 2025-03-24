@@ -41,6 +41,8 @@ with col1:
                                     10, 300,
                                     step=5, value=120)
 
+    st.caption(f"This is approximately 1 patient every {((60*24) / mean_arrivals_per_day):.1f} minutes")
+
     seed = 42
 
     # seed = st.slider("🎲 Set a random number for the computer to use",
@@ -65,7 +67,7 @@ with col2:
                                 5, 30, step=5, value=10)
 
     norm_dist = Normal(consult_time, consult_time_sd, random_seed=seed)
-    norm_fig = px.histogram(norm_dist.sample(size=2500), height=150,
+    norm_fig = px.histogram(norm_dist.sample(size=10000), height=150,
                             color_discrete_sequence=["#0c9e10"])
 
     norm_fig.update_layout(yaxis_title="", xaxis_title="Consultation Time<br>(Minutes)")
