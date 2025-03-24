@@ -34,16 +34,18 @@ col1, col2 = st.columns(2)
 
 with col1:
 
-    nurses = st.slider("👨‍⚕️👩‍⚕️ How Many Rooms/Nurses Are Available?", 1, 15, step=1, value=4)
+    nurses = st.slider("👨‍⚕️👩‍⚕️ How Many Rooms/Nurses Are Available?", 1, 10, step=1, value=4)
 
 
     mean_arrivals_per_day = st.slider("🧍 How many patients should arrive per day on average?",
                                     10, 300,
                                     step=5, value=120)
 
-    seed = st.slider("🎲 Set a random number for the computer to use",
-                        1, 1000,
-                        step=1, value=42)
+    seed = 42
+
+    # seed = st.slider("🎲 Set a random number for the computer to use",
+    #                     1, 1000,
+    #                     step=1, value=42)
 
 
     run_time_days = 3
@@ -140,6 +142,7 @@ if button_run_pressed:
                 include_play_button=True,
                 icon_and_text_size=10,
                 gap_between_entities=10,
+                # custom_resource_icon= ,
                 gap_between_rows=25,
                 gap_between_resources=15,
                 plotly_height=400,
@@ -147,7 +150,7 @@ if button_run_pressed:
                 override_x_max=300,
                 override_y_max=500,
                 wrap_queues_at=15,
-                step_snapshot_max=100,
+                step_snapshot_max=60,
                 time_display_units="dhm",
                 display_stage_labels=False,
                 add_background_image="https://raw.githubusercontent.com/hsma-programme/Teaching_DES_Concepts_Streamlit/main/resources/Simplest%20Model%20Background%20Image%20-%20Horizontal%20Layout.drawio.png",
