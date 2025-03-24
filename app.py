@@ -145,7 +145,7 @@ if button_run_pressed:
                 icon_and_text_size=10,
                 gap_between_entities=10,
                 # custom_resource_icon= ,
-                gap_between_rows=25,
+                gap_between_rows=30,
                 gap_between_resources=15,
                 plotly_height=400,
                 plotly_width=600,
